@@ -24,7 +24,7 @@
 	"portsAttributes": {
 		"5000": {
 			"label": "Hello Remote World",
-			"onAutoForward": "openBrowser"
+			"onAutoForward": "openPreview"
 		}
 	},
 
