@@ -12,7 +12,10 @@
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
-			"settings": {},
+			"settings": {
+                "python.defaultInterpreterPath": 
+                    "/usr/local/bin/python"
+            },
 			"extensions": [
 				"streetsidesoftware.code-spell-checker"
 			]
