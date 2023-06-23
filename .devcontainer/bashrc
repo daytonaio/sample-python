@@ -98,5 +98,12 @@ function parse_git_dirty {
 
 export PS1="\w \[\e[32m\]\`parse_git_branch\`\[\e[m\]  \\$"
 
-export PIPX_HOME="/usr/local/py-utils"
-if [[ "\${PATH}" != *"\${PIPX_BIN_DIR}"* ]]; then export PATH="\${PATH}:\${PIPX_BIN_DIR}"; fi
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
+
+# Add pipx and pip to path
+pathadd "/usr/local/py-utils/bin"
+pathadd "${HOME}/.local/bin"
