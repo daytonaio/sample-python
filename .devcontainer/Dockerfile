@@ -18,8 +18,8 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 RUN bash /tmp/library-scripts/python-debian.sh "${USERNAME}"
 
-USER $USERNAME
+USER ${USERNAME}
 
 # Everything following will be owned by $USERNAME
-COPY ./bashrc  /home/${USERNAME}/.bashrc
+COPY --chown=${USERNAME} ./bashrc  /home/${USERNAME}/.bashrc
 
