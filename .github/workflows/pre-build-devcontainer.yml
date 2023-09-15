@@ -23,7 +23,7 @@ jobs:
       - name: Pre-build dev container image
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/metcalfc/simple-flask
-          cacheFrom: ghcr.io/metcalfc/simple-flask
+          imageName: ghcr.io/metcalfc/simple-flask/prebuild
+          cacheFrom: ghcr.io/metcalfc/simple-flask/prebuild
           push: always
       
